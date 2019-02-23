@@ -79,7 +79,7 @@
                     of our beloved Project Manager by phone or email.
                 </div>
                 <div class="helpCenter__contacts">
-                    <strong> +971 (0) 555 help@qtest.com</strong>
+                    <strong> +971 (0) 555   <a href="mailto:help@qtest.com">help@qtest.com</a></strong>
                 </div>
             </div>
         </div>
@@ -127,7 +127,7 @@
                 </h2>
                 <input type="file" id="uploadFileButton" class="uploadFileButton hidden" accept=".doc,.docx,.txt,.pdf">
                 <br>
-                <label for="uploadFileButton" class="uploadFileButtonLabel">
+                <label for="uploadFileButton" class="uploadFileButtonLabel" tabindex="1">
                     <div class="uploadFileButton__icon">
                         <i class="fas fa-cloud-upload-alt"></i>
                     </div>
@@ -167,7 +167,7 @@
                                 842
                             </td>
                             <td class="fileList__tableItemTitle">
-                                <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-trash-alt" tabindex="1"></i>
                             </td>
                         </tr>
                         <tr class="fileList__tableItem">
@@ -185,8 +185,8 @@
                             <td class="fileList__tableItemTitle">
                                 2,326
                             </td>
-                            <td class="fileList__tableItemTitle">
-                                <i class="fas fa-trash-alt"></i>
+                            <td class="fileList__tableItemTitle" >
+                                <i class="fas fa-trash-alt" ></i>
                             </td>
                         </tr>
                     </table>
@@ -288,7 +288,7 @@
                         Tell us how urgent this job is
                     </h1>
                     <div class="tellUrgent__range">
-                        <input type="range" max="100" min="0" step="1" value="50" class="tellUrgent__rangeInput">
+                        <input type="range" max="100" name="urgent" min="0" step="1" value="50" class="tellUrgent__rangeInput">
                     </div>
                     <div class="range__text">
                         <span>I GOT TIME</span>
@@ -327,6 +327,7 @@
                         </div>
                         <input
                                 type="text"
+                                name="fullName"
                                 id="registerForm__fullNameInput"
                                 class="registerForm__Input"
                                 placeholder="Mathieu Mayer"
@@ -349,6 +350,7 @@
                         </div>
                         <input
                                 type="email"
+                                name="email"
                                 id="registerForm__emailInput"
                                 class="registerForm__Input"
                                 placeholder="mathieu.mm@me.com"
@@ -371,6 +373,7 @@
                         </div>
                         <input
                                 type="password"
+                                name="password"
                                 id="registerForm__passwordInput"
                                 class="registerForm__Input"
                                 placeholder="Enter a password"
@@ -390,6 +393,7 @@
                     <input
                             name="payType"
                             type="radio"
+                            value="mastercard / visa"
                             id="selectPayType__card"
                             class="checkboxType hidden"
                             checked>
@@ -408,6 +412,7 @@
                     <input
                             name="payType"
                             type="radio"
+                            value="paypal"
                             id="selectPayType__paypal"
                             class="checkboxType hidden">
                     <label
@@ -424,6 +429,7 @@
                     <input
                             name="payType"
                             type="radio"
+                            value="amazon.com"
                             id="selectPayType__amazon"
                             class="checkboxType hidden">
                     <label
@@ -448,6 +454,7 @@
                         </div>
                         <input
                                 type="text"
+                                name="cardNumber"
                                 id="cardInfo__item-number"
                                 class="cardInfo__item--input cardInfo__item--inputNumber"
                                 pattern="^[0-9]+$"
@@ -466,23 +473,25 @@
                             EXPIRE DATE
                         </div>
                         <input
-                                type="date"
+                                type="text"
                                 id="cardInfo__item-date"
+                                placeholder="DD/MM/YY"
                                 class="cardInfo__item--input cardInfo__item--inputDate"
                                 name="date"
-                                minlength="10"
+                                minlength="8"
                                 required>
 
                     </label>
 
                     <label
                             for="cardInfo__item-code"
-                            class="cardInfo__item" >
+                            class="cardInfo__item">
                         <div class="registerForm__label--title">
                             CODE
                         </div>
                         <input
                                 type="password"
+                                name="CV"
                                 id="cardInfo__item-code"
                                 class="cardInfo__item--input cardInfo__item--inputCode"
                                 pattern="^[0-9]+$"
@@ -494,10 +503,13 @@
                 </div>
                 <div class="paymentBlock__buttons">
                     <input type="checkbox"
+                           name="Agree"
                            id="paymentBlock__buttons--checkbox"
                            checked
                     required>
-                    <label for="paymentBlock__buttons--checkbox">
+                    <label
+                            for="paymentBlock__buttons--checkbox"
+                            class="paymentBlock__buttons--label">
                         I agree to rhe Terms & Conditions
                     </label>
                     <div class="headerButtons">

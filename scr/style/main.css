@@ -4,8 +4,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    padding: 10px;
+}
 h1{
     margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #6e768f;
 }
 .hidden {
     position: absolute;
@@ -296,6 +303,9 @@ h1{
     color: #d7d9e0;
     position: relative;
     display: inline-block;
+}
+.selectDocumentBlock{
+    width: 100%;
 }
 .select::after {
     content: "▼";
@@ -690,6 +700,7 @@ input[type=range]:focus::-ms-fill-upper {
     width: 400px;
 }
 .cardInfo__item--inputDate{
+    text-align: center;
     width: 140px;
 }
 .cardInfo__item--inputCode{
@@ -699,6 +710,7 @@ input[type=range]:focus::-ms-fill-upper {
     flex-direction: row;
     display: flex;
     justify-content: flex-end;
+    align-items: baseline;
 }
 
 .paymentBlock__buttons .headerButtons{
@@ -706,4 +718,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .paymentBlock__buttons .headerButtons::after{
     display: none;
+}
+.headerButtons .headerButtonsItem:not(:last-child), .paymentBlock__buttons--label{
+    margin-right: 20px;
 }
