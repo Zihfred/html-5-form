@@ -3,19 +3,18 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Title</title>
-
+    <title>HTML5 Form</title>
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="style/responsive.css">
 </head>
 <body>
-
 <div class="wrapper">
-    <form action="URL">
+    <form action="URL" class="formWrapper">
         <div class="formHeader">
             <div class="yourOrders">
                 <div class="youOrders__icon">
@@ -56,15 +55,14 @@
                         48 hours
                     </div>
                 </div>
-
             </div>
             <div class="headerButtons">
-                <button class="headerButtonsItem" type="submit">
-                    PLACE ORDER
+                <button class="headerButtonsItem headerButtonsItem--submit" type="submit">
+                   place order
                 </button>
                 <br>
                 <button class="headerButtonsItem" type="button">
-                    PRINT A QUOTE
+                   print a quote
                 </button>
             </div>
             <div class="helpCenter">
@@ -80,9 +78,12 @@
                 </div>
                 <div class="helpCenter__contacts">
                     <strong>
-                        +971 (0) 555
+                        <a href="tel:+971 (0) 555"
+                           class="helpCenter__contacts--phone">
+                            +971 (0) 555
+                        </a>
                         <a href="mailto:help@qtest.com"
-                            class="helpCenter__contacts--mail">
+                           class="helpCenter__contacts--mail">
                             help@qtest.com
                         </a>
                     </strong>
@@ -91,12 +92,18 @@
         </div>
         <div class="insideWrapper">
             <div class="selectTypeBlock">
-                <h1 class="selectTypeBlock__title">
+                <div class="selectTypeBlock__title">
                     select what you want to translate
-                </h1>
+                </div>
                 <div class="selectTypeBlock__checkboxes">
-                    <input type="radio" id="website"
-                           name="Type" value="website" class="checkboxType hidden" checked>
+                    <input type="radio"
+                           title="Radio"
+                           id="website"
+                           name="Type"
+                           value="website"
+                           class="checkboxType hidden"
+                           checked
+                           required>
                     <label for="website" class="typeBlockItem__label">
                         <div class="typeBlockItem__img"><i class="fas fa-tablet-alt"></i></div>
                         <div class="typeBlockItem__title">Website</div>
@@ -104,8 +111,12 @@
                             <i class="fas fa-check"></i>
                         </div>
                     </label>
-                    <input type="radio" id="document"
-                           name="Type" value="document" class="checkboxType hidden">
+                    <input type="radio"
+                           title="Document"
+                           id="document"
+                           name="Type"
+                           value="document"
+                           class="checkboxType hidden">
                     <label for="document" class="typeBlockItem__label">
                         <div class="typeBlockItem__img"><i class="fas fa-file-alt"></i></div>
                         <div class="typeBlockItem__title">Document</div>
@@ -113,8 +124,12 @@
                             <i class="fas fa-check"></i>
                         </div>
                     </label>
-                    <input type="radio" id="socialacc"
-                           name="Type" value="social" class="checkboxType hidden">
+                    <input type="radio"
+                           title="Social account"
+                           id="socialacc"
+                           name="Type"
+                           value="social"
+                           class="checkboxType hidden">
                     <label for="socialacc" class="typeBlockItem__label">
                         <div class="typeBlockItem__img"><i class="fab fa-instagram"></i></div>
                         <div class="typeBlockItem__title">Social Account</div>
@@ -125,13 +140,17 @@
                 </div>
             </div>
             <div class="selectDocumentBlock numberedBlock">
-                <h1 class="selectDocumentBlock__title">
+                <div class="selectDocumentBlock__title">
                     Upload your documents
-                </h1>
+                </div>
                 <h2 class="selectDocumentBlock__subtitle">
                     (Doc,Docx,Text,Markdown)
                 </h2>
-                <input type="file" id="uploadFileButton" class="uploadFileButton hidden" accept=".doc,.docx,.txt,.pdf">
+                <input type="file"
+                       title="Upload file"
+                       id="uploadFileButton"
+                       class="uploadFileButton hidden"
+                       accept=".doc,.docx,.txt,.pdf">
                 <br>
                 <label for="uploadFileButton" class="uploadFileButtonLabel" tabindex="0">
                     <div class="uploadFileButton__icon">
@@ -173,7 +192,7 @@
                                 842
                             </td>
                             <td class="fileList__tableItemTitle">
-                                <a href=""><i class="fas fa-trash-alt"></i></a>
+                                <a href="#"><i class="fas fa-trash-alt"></i></a>
 
                             </td>
                         </tr>
@@ -192,22 +211,26 @@
                             <td class="fileList__tableItemTitle">
                                 2,326
                             </td>
-                            <td class="fileList__tableItemTitle" >
-                                <a href=""><i class="fas fa-trash-alt"></i></a>
+                            <td class="fileList__tableItemTitle">
+                                <a href="#"><i class="fas fa-trash-alt"></i></a>
                             </td>
                         </tr>
                     </table>
                 </div>
             </div>
             <div class="selectLanguageBlock numberedBlock">
-                <h1 class="selectLanguageBlock__title">
+                <div class="selectLanguageBlock__title">
                     Choose your languages pairing
-                </h1>
-                <label for="selectLangFrom" class="langLabel">
-                    FROM
+                </div>
+                <label for="selectLangFrom"
+                       class="langLabel">
+                    from
                 </label>
                 <div class="select">
-                    <select name="From" id="selectLangFrom" class="selectLangFrom">
+                    <select name="From"
+                            id="selectLangFrom"
+                            class="selectLangFrom"
+                            required>
                         <option>English</option>
                         <option>Russian</option>
                         <option>France</option>
@@ -215,10 +238,13 @@
                 </div>
                 <br>
                 <label for="selectLangTo" class="langLabel ">
-                    TO
+                    to
                 </label>
                 <div class="select">
-                    <select name="TO" id="selectLangTo" class="selectLangFrom selectLang">
+                    <select name="TO"
+                            id="selectLangTo"
+                            class="selectLangFrom selectLang"
+                            required>
                         <option>English</option>
                         <option>Russian</option>
                         <option>France</option>
@@ -226,31 +252,40 @@
                 </div>
 
                 <div class="select">
-                    <select name="TO" id="selectLangToSecond" class="selectLangFrom selectLang selectLangToSecond">
+                    <select name="TO"
+                            id="selectLangToSecond"
+                            class="selectLangFrom selectLang selectLangToSecond">
                         <option>English</option>
                         <option>Russian</option>
                         <option>France</option>
                     </select>
 
                 </div>
-                <div class="selectLangToSecond__icon">
-                    <a href="">
+                <button type="button" class="selectLangToSecond__icon">
+                    <a href="#">
                         <i class="fas fa-trash-alt"></i>
                     </a>
-                </div>
+                </button>
                 <button class="selectLang__add" type="button">
                     + ADD
                 </button>
             </div>
             <div class="wrapperInner">
                 <div class="selectDesired numberedBlock">
-                    <h1 class="selectDocumentBlock__title selectDesired__title">
+                    <div class="selectDocumentBlock__title selectDesired__title">
                         Select your desired tone
-                    </h1>
+                    </div>
                     <div class="selectDesired__checkboxes">
-                        <input type="radio" id="Friendly"
-                               name="Desired" value="Friendly" class="checkboxType hidden" checked>
-                        <label for="Friendly" class="typeBlockItem__label selectDesired__checkboxes--label ">
+                        <input type="radio"
+                               title="Friendly"
+                               id="Friendly"
+                               name="Desired"
+                               value="Friendly"
+                               class="checkboxType hidden"
+                               checked
+                                required>
+                        <label for="Friendly"
+                               class="typeBlockItem__label selectDesired__checkboxes--label ">
                             <div class="typeBlockItem__icon">
                                 <i class="fas fa-comments"></i>
                             </div>
@@ -263,9 +298,14 @@
                         </label>
 
 
-                        <input type="radio" id="Corporate"
-                               name="Desired" value="Corporate / Pro" class="checkboxType hidden">
-                        <label for="Corporate" class="typeBlockItem__label selectDesired__checkboxes--label ">
+                        <input type="radio"
+                               title="Corporate / Pro"
+                               id="Corporate"
+                               name="Desired"
+                               value="Corporate / Pro"
+                               class="checkboxType hidden">
+                        <label for="Corporate"
+                               class="typeBlockItem__label selectDesired__checkboxes--label ">
                             <div class="typeBlockItem__icon">
                                 <i class="fas fa-suitcase"></i>
                             </div>
@@ -277,9 +317,14 @@
                             </div>
                         </label>
 
-                        <input type="radio" id="Media"
-                               name="Desired" value="Media / Formal" class="checkboxType hidden">
-                        <label for="Media" class="typeBlockItem__label selectDesired__checkboxes--label ">
+                        <input type="radio"
+                               title="Media / Formal"
+                               id="Media"
+                               name="Desired"
+                               value="Media / Formal"
+                               class="checkboxType hidden">
+                        <label for="Media"
+                               class="typeBlockItem__label selectDesired__checkboxes--label ">
                             <div class="typeBlockItem__icon">
                                 <i class="fas fa-volume-up"></i>
                             </div>
@@ -293,23 +338,31 @@
                     </div>
                 </div>
                 <div class="tellUrgent numberedBlock">
-                    <h1 class="selectDocumentBlock__title">
+                    <div class="selectDocumentBlock__title">
                         Tell us how urgent this job is
-                    </h1>
+                    </div>
                     <div class="tellUrgent__range">
-                        <input type="range" max="100" name="urgent" min="0" step="1" value="50" class="tellUrgent__rangeInput">
+                        <input type="range"
+                               title="Tell us how urgent this job is"
+                               max="100"
+                               name="urgent"
+                               min="0"
+                               step="1"
+                               value="50"
+                               class="tellUrgent__rangeInput"
+                               required>
                     </div>
                     <div class="range__text">
-                        <span>I GOT TIME</span>
-                        <span class="orange">AVERAGE</span>
-                        <span>YESTERDAY</span>
+                        <span>i got time</span>
+                        <span class="orange">average</span>
+                        <span>yesterday</span>
                     </div>
                     <div class="tellUrgent__timeline">
                         <div class="timeline__info">
                             <div class="timeline__info--icon">
                                 <i class="fas fa-info-circle"></i>
                             </div>
-                            TIMELINE INFO
+                            timeline info
                         </div>
                         <div class="timeline__text">
                             With an <span class="orange">AVERAGE</span> timeline set up our expert translator can take a
@@ -321,18 +374,19 @@
                 </div>
             </div>
             <div class="paymentBlock numberedBlock">
-                <h1 class="selectLanguageBlock__title">
+                <div class="selectLanguageBlock__title">
                     Sign up and choose a payment method
-                </h1>
+                </div>
                 <h2 class="selectLanguageBlock__subtitle">
-                    Already have an account with us? Sign in.
+                    Already have an account with us?
+                    <a href="#" class="selectLanguageBlock__signIn">Sign in.</a>
                 </h2>
                 <div class="registerForm">
                     <label
                             for="registerForm__fullNameInput"
                             class="registerForm__label registerForm__labelBlock">
                         <div class="registerForm__label--title">
-                            FULL NAME
+                           full name
                         </div>
                         <input
                                 type="text"
@@ -355,7 +409,7 @@
                             for="registerForm__emailInput"
                             class="registerForm__label">
                         <div class="registerForm__label--title">
-                            EMAIL ADDRESS
+                            email address
                         </div>
                         <input
                                 type="email"
@@ -378,7 +432,7 @@
                             for="registerForm__passwordInput"
                             class="registerForm__label">
                         <div class=" registerForm__label--title registerForm__label--titleInline">
-                            CHOOSE A PASSWORD
+                            chose a password
                         </div>
                         <input
                                 type="password"
@@ -405,14 +459,15 @@
                             value="mastercard / visa"
                             id="selectPayType__card"
                             class="checkboxType hidden"
-                            checked>
+                            checked
+                            required>
                     <label
                             for="selectPayType__card"
                             class="typeBlockItem__label selectPayType__item">
-                                <div class="selectPayType__item--image">
-                                    <img src="img/visa.png"/>
-                                    <img src="img/mastercard.png"/>
-                                </div>
+                        <div class="selectPayType__item--image">
+                            <img src="img/visa.png"/>
+                            <img src="img/mastercard.png"/>
+                        </div>
                         <div class="typeBlockItem__label--active">
                             <i class="fas fa-check"></i>
                         </div>
@@ -423,7 +478,8 @@
                             type="radio"
                             value="paypal"
                             id="selectPayType__paypal"
-                            class="checkboxType hidden">
+                            class="checkboxType hidden"
+                            required>
                     <label
                             for="selectPayType__paypal"
                             class="typeBlockItem__label selectPayType__item">
@@ -440,7 +496,8 @@
                             type="radio"
                             value="amazon.com"
                             id="selectPayType__amazon"
-                            class="checkboxType hidden">
+                            class="checkboxType hidden"
+                            required>
                     <label
                             for="selectPayType__amazon"
                             class=" typeBlockItem__label selectPayType__item">
@@ -459,7 +516,7 @@
                             for="cardInfo__item-number"
                             class="cardInfo__item">
                         <div class="registerForm__label--title">
-                            CARD NUMBER
+                            card number
                         </div>
                         <input
                                 type="text"
@@ -480,11 +537,11 @@
                             for="cardInfo__item-date"
                             class="cardInfo__item">
                         <div class="registerForm__label--title">
-                            EXPIRE DATE
+                            expire date
                         </div>
                         <input
                                 type="date"
-                                title="Enter date in format: DD/MM/YY"
+                                title="Enter date in format: DD.MM.YYYY"
                                 id="cardInfo__item-date"
                                 placeholder="DD/MM/YY"
                                 class="cardInfo__item--input cardInfo__item--inputDate"
@@ -517,20 +574,19 @@
                     <input type="checkbox"
                            name="Agree"
                            id="paymentBlock__buttons--checkbox"
-                           checked
-                    required>
+                           required>
                     <label
                             for="paymentBlock__buttons--checkbox"
                             class="paymentBlock__buttons--label">
-                        I agree to the Terms & Conditions
+                        I agree to the <a href="">Terms & Conditions</a>
                     </label>
                     <div class="headerButtons">
-                        <button class="headerButtonsItem" type="submit">
-                            PLACE ORDER
+                        <button class="headerButtonsItem headerButtonsItem--submit" type="submit">
+                            place order
                         </button>
                         <br>
                         <button class="headerButtonsItem" type="button">
-                            PRINT A QUOTE
+                            print a quote
                         </button>
                     </div>
                 </div>
